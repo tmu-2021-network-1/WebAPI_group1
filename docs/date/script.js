@@ -2,14 +2,21 @@ const apiUri = 'https://collectionapi.metmuseum.org/public/collection/v1';
 const objectsUri = `${apiUri}/objects`;
 const searchUri = `${apiUri}/search`;
 
-const search = async () => {
+const search = async (button) => {
   const keywordInput = document.getElementById('keyword');
   const keyword = keywordInput.value;
-  const locationInput = document.getElementById('location');
-  const location = locationInput.value;
-  const minWidth = +document.getElementById('min-width').value;
-  const maxWidth = +document.getElementById('max-width').value;
-  const uri = `${searchUri}?geoLocation=${location}&hasImages=true&dateBegin=1000&q=${encodeURIComponent(keyword)}`;
+
+   // get date
+   let date = "";
+   if (button) {
+      datebegin = button.value;
+      dateend = parseInt(button.value) + parseInt("100");
+   }
+
+   console.log(datebegin, dateend);
+
+  const uri = `${searchUri}?geoLocation=France&dateBegin=${datebegin}&dateEnd=${dateend}&hasImages=true&q=${encodeURIComponent(keyword)}`;
+  
   console.log(uri);
   const json = await getData(uri);
   console.log(json);
@@ -47,14 +54,10 @@ const search = async () => {
     };
     object.querySelector(`.date`).textContent = objectJson['objectDate'];
     const a = object.querySelector(`.image-link`);
-    a.href = `./detail/detail.html?id=${id}`;
+    a.href = `../detail/detail.html?id=${id}`;
     const img = object.querySelector(`img`);
     img.src = objectJson['primaryImageSmall'];
 
-    const width = objectJson.measurements[0].elementMeasurements.Width;
-    if (width < minWidth || width > maxWidth) {
-      object.classList.add('off');
-    }
     i++;
   }
 

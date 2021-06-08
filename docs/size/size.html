@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js"></script>
+    <title>WebAPI_group1_Size</title>
+  </head>
+  
+ <header>
+    <ul id = "menu">
+      <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
+      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
+      <li id = "sukima"></li>
+      <li id = "TypeMenu"><a href="../index.html"><br>Type of Search</a></li>
+      <li id = "eachMenu"><a href="size.html"><br>Size</a></li>
+      <li id = "eachMenu"><a href="../date/date.html"><br>Date</a></li>
+      <li id = "eachMenu"><a href="../place/place.html"><br>Place</a></li>
+    </ul>
+  </header>
+
+
+  <body>
+    <h1>Search By Size</h1>
+    <h2>Here, you can compare the size of the animal to the size of the artwork to get a better idea of the size.</h2>
+    <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+
+    <div class = "description">
+      
+     
+      <div class = "picture1">
+       
+        <img src="sizeimages/example.png" alt="explanation-image" width="90%">
+      </div> 
+      
+
+      <div class = "picture2">
+        <img src="sizeimages/kuma.png" alt="rhinoceros-image" width="100%">
+      </div>
+      
+      
+    </div>
+
+
+    <h1>By size of animal</h1>
+
+    
+    <!-- <form onsubmit="return search();"> -->
+
+    <label>Keyword<input id="keyword" type="text" value="sunflowers"></label>
+    <br>
+  
+    <ul id = "buttons">
+      <li>
+        <img src="sizeimages/uk.png" alt="rabbit&fox-image" width="100%">
+        <button name="minWidth" value="0" onclick="search(this);">0 ~1m</button>
+      </li>
+      <li>
+        <img src="sizeimages/kb.png" alt="kangaroo&bear-image" width="100%">
+        <button name="minWidth" value="100" onclick="search(this);">1 ~2m</button>
+      </li>
+      <li>
+        <img src="sizeimages/wh.png" alt="crocodile&hose-image" width="100%">
+        <button name="minWidth" value="200" onclick="search(this);">2 ~3m</button>
+      </li>
+    </ul>
+
+    <ul id = "buttons">
+      <li>
+        <img src="sizeimages/sai.png" alt="rhinoceros-image" width="100%">
+        <button name="minWidth" value="300" onclick="search(this);">3 ~4m</button>
+      </li>
+      <li>
+        <img src="sizeimages/iruka.png" alt="dolphin-image" width="100%">
+        <button name="minWidth" value="400" onclick="search(this);">4 ~5m</button>
+      </li>
+      <li>
+        <img src="sizeimages/zou.png" alt="elephant-image" width="100%">
+        <button name="minWidth" value="500" onclick="search(this);">5 ~6m</button>
+      </li>
+    </ul>
+
+    <!-- </form> -->
+    <div id="count"></div>
+    <div id="objects-container">
+      <ul id="objects"></ul>
+    </div>
+    <pre id="result"></pre> 
+  </body>
+
+  <footer>
+    <a href="https://metmuseum.github.io/" target="_blank">The Metropolitan Museum of Art Collection API</a>
+  </footer>
+
+  
+</html>
