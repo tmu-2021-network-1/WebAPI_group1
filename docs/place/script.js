@@ -47,7 +47,7 @@ const search = async () => {
     };
     object.querySelector(`.date`).textContent = objectJson['objectDate'];
     const a = object.querySelector(`.image-link`);
-    a.href = `./detail/detail.html?id=${id}`;
+    a.href = `../detail/detail.html?id=${id}`;
     const img = object.querySelector(`img`);
     img.src = objectJson['primaryImageSmall'];
 

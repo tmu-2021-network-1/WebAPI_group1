@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js"></script>
+    <title>WebAPI_group1_Place</title>
+  </head>
+  
+  <header>
+    <ul id = "menu">
+      <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
+      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
+      <li id = "sukima"></li>
+      <li id = "TypeMenu"><a href="../index.html">Type of Search</a></li>
+      <li id = "eachMenu"><a href="../size/size.html">Size</a></li>
+      <li id = "eachMenu"><a href="../date/date.html">Date</a></li>
+      <li id = "eachMenu"><a href="place.html">Place</a></li>
+    </ul>
+  </header>
+
+  <body>
+    <h1>Search By Place</h1>
+    <h2>Here, you may be able to get a feel for the characteristics of each country's works by scarching for works by country.</h2>
+
+
+    <div class = "description">
+      <div class = "picture1">
+        <h1>絵の写真</h1>
+      </div> 
+
+      <div class = "picture2">
+        <h1>場所の写真</h1>
+      </div>
+    </div>
+
+
+    <h1>By Country</h1>
+
+    
+    <!-- <form onsubmit="return search();"> -->
+    <label>Location<input id="location" type="text" value="France"></label>
+    <br>
+    <label>Keyword<input id="keyword" type="text" value="sunflowers"></label>
+    <br>
+    <label>min width<input id="min-width" type="text" value="0" size="4"></label>
+    <br>
+    <label>max width<input id="max-width" type="text" value="80" size="4"></label>
+  
+    <ul id = "buttons">
+      <li>
+        <h1>国の写真1</h1>
+        <button id="button" onclick="search();">国名1</button>
+      </li>
+      <li>
+        <h1>国の写真2</h1>
+        <button id="button" onclick="search();">国名2</button>
+      </li>
+      <li>
+        <h1>国の写真3</h1>
+        <button id="button" onclick="search();">国名3</button>
+      </li>
+    </ul>
+
+    <ul id = "buttons">
+      <li>
+        <h1>国の写真4</h1>
+        <button id="button" onclick="search();">国名4</button>
+      </li>
+      <li>
+        <h1>国の写真5</h1>
+        <button id="button" onclick="search();">国名5</button>
+      </li>
+      <li>
+        <h1>国の写真6</h1>
+        <button id="button" onclick="search();">国名6</button>
+      </li>
+    </ul>
+
+    <!-- </form> -->
+    <div id="count"></div>
+    <div id="objects-container">
+      <ul id="objects"></ul>
+    </div>
+    <pre id="result"></pre> 
+  </body>
+
+  <footer>
+    <a href="https://metmuseum.github.io/" target="_blank">The Metropolitan Museum of Art Collection API</a>
+  </footer>
+
+  
+</html>
