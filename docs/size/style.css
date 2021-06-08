@@ -82,14 +82,14 @@ header{
 body {
   background-color: rgb(0, 0, 0);
   margin: 0;
-  padding-top: 100px;/*上との隙間*/
+  padding-top: 100px;
 }
 
 .description{
   margin: 5%;
-  padding: 3%;
-  background-color: rgb(50, 50, 50);
-  height: 330px;
+  padding: 5%;
+  background-color: rgb(112, 112, 112);
+  height: 300px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -99,15 +99,13 @@ body {
 .picture1 {
   background-color: rgb(185, 0, 0);
   align-self: auto;
-  flex-basis: 50%;
+  flex-basis: 30%;
 }
 
 .picture2 {
-  background-color: rgb(50,50,50);
+  background-color: rgb(185, 0, 0);
   align-self: auto;
-  flex-basis: 50%;
-  font-size:150%;
-  padding-left: 10%;
+  flex-basis: 30%;
 }
 
 
@@ -158,10 +156,10 @@ button {
 }
  
 #buttons li {
-  width: 140px;
   text-align: center;
   background-color: rgb(202, 202, 202);
   margin: 5%;
+  padding: 5px;
 }
 
 /* ボタン本体のところ*/
@@ -184,40 +182,5 @@ button {
 
 button:hover {
   background-color: rgb(185, 0, 0);
-}
-
-.TopImage h1{
-  text-align: center;
-  background-color:rgba(255, 255, 255, 0.815);
-  width: 30%;
-  color:black;
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  font-style: italic;
-  line-height: 40px;
-  padding: 30px;
-  padding-top:50px;
-  padding-bottom:50px;
-  transform: translate(180%,-170%);
-}
-
-.des h1{
-  position:relative;
-  text-align: center;
-  font-weight: bold;
-  font-size:40px;
-  margin-top: -10%;
-  margin-bottom: 5%;
-}
-
-.contents{
-  font-weight: bold;
-  font-size:25px;
-  margin-left: 5%;
-  position:relative;
-  top:60px; 
-  text-decoration:underline;
-  text-decoration-color:rgb(255, 255, 255);
 }
 
