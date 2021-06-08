@@ -22,50 +22,55 @@
 
 
   <body>
-    <h1>Search By Size</h1>
-    <h2>Here, you can compare the size of the animal to the size of the artwork to get a better idea of the size.</h2>
-    <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+    <div class = "description_text">
+      <h1>Search By Size</h1>
+      <h2>Here, you can compare the size of the animal to the size of the artwork to get a better idea of the size.</h2>
+      <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+    </div>
 
     <div class = "description">
-      
-     
       <div class = "picture1">
-       
         <img src="sizeimages/example.png" alt="explanation-image" width="90%">
       </div> 
-      
 
       <div class = "picture2">
         <img src="sizeimages/kuma.png" alt="rhinoceros-image" width="100%">
       </div>
-      
-      
     </div>
 
-
-    <h1>By size of animal</h1>
-
-    
-    <!-- <form onsubmit="return search();"> -->
-
-    <label>Keyword<input id="keyword" type="text" value="sunflowers"></label>
-    <br>
-  
+    <div class = "search_text">
+      <h1>By size of animal</h1>
+      <label>Keyword <input id="keyword" type="text" value="sunflowers"></label>
+    </div>
+ 
     <ul id = "buttons">
       <li>
         <img src="sizeimages/uk.png" alt="rabbit&fox-image" width="100%">
-        <button name="minWidth" value="0" onclick="search(this);">0 ~1m</button>
+        <button name="minWidth" value="0" onclick="search(this);">0 ~ 1m</button>
       </li>
       <li>
         <img src="sizeimages/kb.png" alt="kangaroo&bear-image" width="100%">
-        <button name="minWidth" value="100" onclick="search(this);">1 ~2m</button>
+        <button name="minWidth" value="100" onclick="search(this);">1 ~ 2m</button>
       </li>
       <li>
         <img src="sizeimages/wh.png" alt="crocodile&hose-image" width="100%">
-        <button name="minWidth" value="200" onclick="search(this);">2 ~3m</button>
+        <button name="minWidth" value="200" onclick="search(this);">2 ~ 3m</button>
+      </li>
+      <li>
+        <img src="sizeimages/sai.png" alt="rhinoceros-image" width="100%">
+        <button name="minWidth" value="300" onclick="search(this);">3 ~ 4m</button>
+      </li>
+      <li>
+        <img src="sizeimages/iruka.png" alt="dolphin-image" width="100%">
+        <button name="minWidth" value="400" onclick="search(this);">4 ~ 5m</button>
+      </li>
+      <li>
+        <img src="sizeimages/zou.png" alt="elephant-image" width="100%">
+        <button name="minWidth" value="500" onclick="search(this);">5 ~ 6m</button>
       </li>
     </ul>
 
+    <!-- 
     <ul id = "buttons">
       <li>
         <img src="sizeimages/sai.png" alt="rhinoceros-image" width="100%">
@@ -80,8 +85,10 @@
         <button name="minWidth" value="500" onclick="search(this);">5 ~6m</button>
       </li>
     </ul>
+    -->
 
-    <!-- </form> -->
+    <!-- </form> -->]
+    <div id="SearchResults"></div>
     <div id="count"></div>
     <div id="objects-container">
       <ul id="objects"></ul>
