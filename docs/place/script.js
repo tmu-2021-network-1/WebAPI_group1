@@ -10,9 +10,6 @@ const search = async (button) => {
   let location = "";
   if (button) {
     location = button.value;
-  } else {
-    const locationInput = document.getElementById('location');
-    location = locationInput.value;
   }
 
   const uri = `${searchUri}?geoLocation=${location}&hasImages=true&q=${encodeURIComponent(keyword)}`;
@@ -30,7 +27,7 @@ const search = async (button) => {
     item.className = 'object';
     item.innerHTML = `<div class="id">${id}</div>
     <div><strong class="title"></strong></div>
-    <div><a href="#" class="artist"></a></div>
+    <div><strong class="artistDisplayName"></strong></div>
     <div class="date"></div>
     <a href="#" class="image-link"><img alt="" src="../images/loading.gif" class="thumbnail">`;
     list.appendChild(item);
@@ -45,15 +42,7 @@ const search = async (button) => {
 
     object.querySelector(`.id`).textContent = '';
     object.querySelector(`.title`).textContent = objectJson['title'];
-
-    const artist = object.querySelector(`.artist`)
-
-    artist.textContent = objectJson['artistDisplayName'];
-    artist.onclick = () => {
-      document.getElementById('keyword').value = objectJson['artistDisplayName'];
-      search();
-
-    };
+    object.querySelector(`.artistDisplayName`).textContent = objectJson['artistDisplayName'];
     object.querySelector(`.date`).textContent = objectJson['objectDate'];
     const a = object.querySelector(`.image-link`);
     a.href = `../detail/detail.html?id=${id}`;
