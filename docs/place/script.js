@@ -2,14 +2,20 @@ const apiUri = 'https://collectionapi.metmuseum.org/public/collection/v1';
 const objectsUri = `${apiUri}/objects`;
 const searchUri = `${apiUri}/search`;
 
-const search = async () => {
+const search = async (button) => {
   const keywordInput = document.getElementById('keyword');
   const keyword = keywordInput.value;
-  const locationInput = document.getElementById('location');
-  const location = locationInput.value;
-  const minWidth = +document.getElementById('min-width').value;
-  const maxWidth = +document.getElementById('max-width').value;
-  const uri = `${searchUri}?geoLocation=${location}&hasImages=true&dateBegin=1000&q=${encodeURIComponent(keyword)}`;
+  
+  // get location
+  let location = "";
+  if (button) {
+    location = button.value;
+  } else {
+    const locationInput = document.getElementById('location');
+    location = locationInput.value;
+  }
+
+  const uri = `${searchUri}?geoLocation=${location}&hasImages=true&q=${encodeURIComponent(keyword)}`;
   console.log(uri);
   const json = await getData(uri);
   console.log(json);
@@ -26,7 +32,7 @@ const search = async () => {
     <div><strong class="title"></strong></div>
     <div><a href="#" class="artist"></a></div>
     <div class="date"></div>
-    <a href="#" class="image-link"><img alt="" src="images/loading.gif" class="thumbnail">`;
+    <a href="#" class="image-link"><img alt="" src="../images/loading.gif" class="thumbnail">`;
     list.appendChild(item);
   }
 
@@ -39,11 +45,14 @@ const search = async () => {
 
     object.querySelector(`.id`).textContent = '';
     object.querySelector(`.title`).textContent = objectJson['title'];
+
     const artist = object.querySelector(`.artist`)
+
     artist.textContent = objectJson['artistDisplayName'];
     artist.onclick = () => {
       document.getElementById('keyword').value = objectJson['artistDisplayName'];
       search();
+
     };
     object.querySelector(`.date`).textContent = objectJson['objectDate'];
     const a = object.querySelector(`.image-link`);
@@ -51,10 +60,6 @@ const search = async () => {
     const img = object.querySelector(`img`);
     img.src = objectJson['primaryImageSmall'];
 
-    const width = objectJson.measurements[0].elementMeasurements.Width;
-    if (width < minWidth || width > maxWidth) {
-      object.classList.add('off');
-    }
     i++;
   }
 
