@@ -154,6 +154,10 @@ button {
   max-height: 200px;
 }
 
+#count {
+  color: rgb(255, 255, 255);
+}
+
 /* By size of animalのところ*/
 #buttons {
   list-style: none;
