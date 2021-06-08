@@ -28,7 +28,7 @@ const search = async (button) => {
     item.innerHTML = `<div class="id">${id}</div>
     <div><strong class="title"></strong></div>
     <div><strong class="artistDisplayName"></strong></div>
-    <div class="date"></div>
+    <div><strong class="country"></strong></div>
     <a href="#" class="image-link"><img alt="" src="../images/loading.gif" class="thumbnail">`;
     list.appendChild(item);
   }
@@ -43,7 +43,7 @@ const search = async (button) => {
     object.querySelector(`.id`).textContent = '';
     object.querySelector(`.title`).textContent = objectJson['title'];
     object.querySelector(`.artistDisplayName`).textContent = objectJson['artistDisplayName'];
-    object.querySelector(`.date`).textContent = objectJson['objectDate'];
+    object.querySelector(`.country`).textContent = objectJson['country'];
     const a = object.querySelector(`.image-link`);
     a.href = `../detail/detail.html?id=${id}`;
     const img = object.querySelector(`img`);
