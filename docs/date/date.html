@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js"></script>
+    <title>WebAPI_group1_Date</title>
+  </head>
+  
+  <header>
+    <ul id = "menu">
+      <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
+      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
+      <li id = "sukima"></li>
+      <li id = "TypeMenu"><a href="../index.html">Type of Search</a></li>
+      <li id = "eachMenu"><a href="../size/size.html">Size</a></li>
+      <li id = "eachMenu"><a href="date.html">Date</a></li>
+      <li id = "eachMenu"><a href="../place/place.html">Place</a></li>
+    </ul>
+  </header>
+
+  <body>
+    <h1>Search By Date</h1>
+    <h2>Here, you can get a sense of the era in while the work was created by searching by date.</h2>
+
+
+    <div class = "description">
+      <div class = "picture1">
+        <h1>絵の写真</h1>
+      </div> 
+
+      <div class = "picture2">
+        <h1>日付の写真</h1>
+      </div>
+    </div>
+
+
+    <h1>Century-By-Century</h1>
+
+    
+    <!-- <form onsubmit="return search();"> -->
+    <label>Keyword<input id="keyword" type="text" value="sunflowers"></label>
+  
+    <ul id = "buttons">
+      <li>
+        <h1>写真1</h1>
+        <button name="minWidth" value="1500" onclick="search(this);">1500-1600</button>
+      </li>
+      <li>
+        <h1>写真2</h1>
+        <button name="minWidth" value="1600" onclick="search(this);">1600-1700</button>
+      </li>
+      <li>
+        <h1>写真3</h1>
+        <button name="minWidth" value="1700" onclick="search(this);">1700-1800</button>
+      </li>
+    </ul>
+
+     <!-- 
+    <ul id = "buttons">
+      <li>
+        <h1>写真4</h1>
+        <button id="button" onclick="search();">Search4</button>
+      </li>
+      <li>
+        <h1>写真5</h1>
+        <button id="button" onclick="search();">Search5</button>
+      </li>
+      <li>
+        <h1>写真6</h1>
+        <button id="button" onclick="search();">Search6</button>
+      </li>
+    </ul>
+    -->
+
+    <!-- </form> -->
+    <div id="count"></div>
+    <div id="objects-container">
+      <ul id="objects"></ul>
+    </div>
+    <pre id="result"></pre> 
+  </body>
+
+  <footer>
+    <a href="https://metmuseum.github.io/" target="_blank">The Metropolitan Museum of Art Collection API</a>
+  </footer>
+
+  
+</html>
