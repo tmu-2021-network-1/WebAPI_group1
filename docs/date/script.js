@@ -17,6 +17,7 @@ const search = async (button) => {
   console.log(uri);
   const json = await getData(uri);
   console.log(json);
+  document.getElementById('SearchResults').textContent = "Search results";
   document.getElementById('count').textContent = `${json['total']} items found`;
 
   const ids = json['objectIDs'];
