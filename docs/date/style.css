@@ -97,7 +97,7 @@ body {
 }
 
 .description_text h1{
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 .description{
@@ -248,4 +248,14 @@ button {
 
 button:hover {
   background-color: rgb(185, 0, 0);
+}
+
+footer{
+  margin-left: 5%;
+  font-size: 0.8em;
+  color: rgb(124, 124, 124);
+}
+
+footer a {
+  color: rgb(124, 124, 124);
 }
