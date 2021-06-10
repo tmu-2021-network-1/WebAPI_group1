@@ -6,21 +6,19 @@ const search = async (button) => {
   const keywordInput = document.getElementById('keyword');
   const keyword = keywordInput.value;
   
-   // get date
-   let date = "";
-   if (button) {
-      datebegin = button.value;
-      dateend = parseInt(button.value) + parseInt("100");
-   }
+  // get date
+  let date = "";
+  if (button) {
+    datebegin = button.value;
+    dateend = parseInt(button.value) + parseInt("200");
+  }
 
-   console.log(datebegin, dateend);
-
-  const uri = `${searchUri}?geoLocation=France&dateBegin=${datebegin}&dateEnd=${dateend}&hasImages=true&q=${encodeURIComponent(keyword)}`;
-  
+  const uri = `${searchUri}?geoLocation=France&dateBegin=${datebegin}&dateEnd=${dateend}&hasImages=true&q=${encodeURIComponent(keyword)}`;  
   console.log(uri);
   const json = await getData(uri);
   console.log(json);
-  document.getElementById('count').textContent = `${json['total']}items found`;
+  document.getElementById('SearchResults').textContent = "Search results";
+  document.getElementById('count').textContent = `${json['total']} items found`;
 
   const ids = json['objectIDs'];
 
@@ -31,7 +29,7 @@ const search = async (button) => {
     item.className = 'object';
     item.innerHTML = `<div class="id">${id}</div>
     <div><strong class="title"></strong></div>
-    <div><a href="#" class="artist"></a></div>
+    <div><strong class="artistDisplayName"></strong></div>
     <div class="date"></div>
     <a href="#" class="image-link"><img alt="" src="../images/loading.gif" class="thumbnail">`;
     list.appendChild(item);
@@ -46,15 +44,7 @@ const search = async (button) => {
 
     object.querySelector(`.id`).textContent = '';
     object.querySelector(`.title`).textContent = objectJson['title'];
-
-    const artist = object.querySelector(`.artist`)
-
-    artist.textContent = objectJson['artistDisplayName'];
-    artist.onclick = () => {
-      document.getElementById('keyword').value = objectJson['artistDisplayName'];
-      search();
-
-    };
+    object.querySelector(`.artistDisplayName`).textContent = objectJson['artistDisplayName'];
     object.querySelector(`.date`).textContent = objectJson['objectDate'];
     const a = object.querySelector(`.image-link`);
     a.href = `../detail/detail.html?id=${id}`;

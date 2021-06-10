@@ -21,9 +21,11 @@
   </header>
 
   <body>
-    <h1>Search By Date</h1>
-    <h2>Here, you can get a sense of the era in while the work was created by searching by date.</h2>
-    <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+    <div class = "description_text">
+      <h1>Search By Date</h1>
+      <h2>Here, you can get a sense of the era in while the work was created by searching by date.</h2>
+      <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+    </div>
 
 
     <div class = "description">
@@ -36,42 +38,44 @@
       </div>
     </div>
 
-
-    <h1>Century-By-Century</h1>
-
-    <label>Keyword<input id="keyword" type="text" value="flowers"></label>
-  
-    <ul id = "buttons">
-      <li>
-        <h1>時代の写真1</h1>
-        <button name="minWidth" value="1500" onclick="search(this);">1500-1600</button>
-      </li>
-      <li>
-        <h1>時代の写真2</h1>
-        <button name="minWidth" value="1600" onclick="search(this);">1600-1700</button>
-      </li>
-      <li>
-        <h1>時代の写真3</h1>
-        <button name="minWidth" value="1700" onclick="search(this);">1700-1800</button>
-      </li>
-    </ul>
+    <div class = "search_text">
+      <h1>Century-By-Century</h1>
+      <h3>Type in a keyword of your choice and press the button with the number on it, and the search results related to that keyword and century will appear below.
+        <br>
+        Clicking on a work that appears in the search results will take you to the detailed page of that work.
+      </h3>
+      <label>Keyword <input id="keyword" type="text" value="flowers"></label>
+    </div>
 
     <ul id = "buttons">
       <li>
-        <h1>時代の写真1</h1>
-        <button name="minWidth" value="1800" onclick="search(this);">1800-1900</button>
+        <img src="../photos/1000.png" width="100%">
+        <button name="datebegin" value="1000" onclick="search(this);">1000-1200</button>
       </li>
       <li>
-        <h1>時代の写真2</h1>
-        <button name="minWidth" value="1900" onclick="search(this);">1900-2000</button>
+        <img src="../photos/1200.png" width="100%">
+        <button name="datebegin" value="1200" onclick="search(this);">1200-1400</button>
       </li>
       <li>
-        <h1>時代の写真3</h1>
-        <button name="minWidth" value="2000" onclick="search(this);">2000-</button>
+        <img src="../photos/1400.png" width="100%">
+        <button name="datebegin" value="1400" onclick="search(this);">1400-1600</button>
+      </li>
+      <li>
+        <img src="../photos/1600.png" width="100%">
+        <button name="datebegin" value="1600" onclick="search(this);">1600-1800</button>
+      </li>
+      <li>
+        <img src="../photos/1800.png" width="100%">
+        <button name="datebegin" value="1800" onclick="search(this);">1800-2000</button>
+      </li>
+      <li>
+        <img src="../photos/2000.png" width="100%">
+        <button name="datebegin" value="2000" onclick="search(this);">2000-</button>
       </li>
     </ul>
 
     <!-- </form> -->
+    <div id="SearchResults"></div>
     <div id="count"></div>
     <div id="objects-container">
       <ul id="objects"></ul>
@@ -80,8 +84,9 @@
   </body>
 
   <footer>
-    <a href="https://metmuseum.github.io/" target="_blank">The Metropolitan Museum of Art Collection API</a>
+    <p>
+      This website was created by students of Tokyo Metropolitan University as a class project.  API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
+    </p>
   </footer>
 
-  
 </html>
