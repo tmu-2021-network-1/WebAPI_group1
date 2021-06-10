@@ -10,7 +10,7 @@ const search = async (button) => {
   let date = "";
   if (button) {
     datebegin = button.value;
-    dateend = parseInt(button.value) + parseInt("100");
+    dateend = parseInt(button.value) + parseInt("200");
   }
 
   const uri = `${searchUri}?geoLocation=France&dateBegin=${datebegin}&dateEnd=${dateend}&hasImages=true&q=${encodeURIComponent(keyword)}`;  
