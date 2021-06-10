@@ -115,23 +115,27 @@ hr {
   color: rgb(194, 194, 194);
 }
 
-
 /* 各ページのところ */
 .contents{
   font-weight: bold;
-  font-size:25px;
+  font-size: 1.5em; /*  */
+  margin-top: 6%;
+  margin-bottom: 3%;
+  margin-right: 5%;
   margin-left: 5%;
   position:relative;
-  top:60px; 
   text-decoration:underline;
   text-decoration-color:rgb(255, 255, 255);
 }
 
 .description{
-  margin: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 5%;
+  margin-left: 5%;
   padding: 3%;
   background-color: rgb(50, 50, 50);
-  height: 330px;
+  height: 30%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -146,14 +150,13 @@ hr {
 .picture2 {
   align-self: auto;
   flex-basis: 50%;
-  font-size: 150%;
+  font-size: 1.3em;
   padding-left: 10%;
 }
 
 .picture2 h4 {
   background-color: rgb(95, 95, 95);
   text-align: center;
-  width: 20%;
   margin-left: 70%;
   padding: 1%;
   border-radius: 0.1em;

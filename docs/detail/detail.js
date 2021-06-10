@@ -3,7 +3,7 @@ const objectsUri = `${apiUri}/objects`;
 const searchUri = `${apiUri}/search`;
 
 const params = new URLSearchParams(window.location.search);
-
+ 
 const render = async () => {
   const id = params.get("id");
   const objectUri = `${objectsUri}/${id}`;
@@ -13,30 +13,53 @@ const render = async () => {
 
   const imageLink = document.createElement('a');
   imageLink.href = objectJson.primaryImage;
-  imageLink.innerHTML = `<img src="${objectJson.primaryImageSmall}">`;
+  imageLink.innerHTML = `<center><img src="${objectJson.primaryImageSmall}"><br></center>`;
   objectDiv.appendChild(imageLink);
 
+  const text = document.createElement('text');
+
+  const title = objectJson.title;
+  //const titletext = document.createElement('titletext');
+  //titletext.innerText = `Title: ${title}`;
+  //objectDiv.appendChild(titletext);
+
+  const name = objectJson.artistDisplayName;
+  const artistBeginDate　= objectJson.artistBeginDate;
+  const artistEndDate　= objectJson.artistEndDate;
   const height = objectJson.measurements[0].elementMeasurements.Height;
   const width = objectJson.measurements[0].elementMeasurements.Width;
-
-  const p = document.createElement('p');
-  p.innerText = `${height} x ${width} cm`;
-  objectDiv.appendChild(p);
-
-
-  const table = document.createElement('table');
-  for (const property in objectJson) {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<th>${property}<th><td>${objectJson[property]}</td>`;
-    table.appendChild(tr);
-  }
-  objectDiv.appendChild(table);
+  const city = objectJson.city;
+  const department = objectJson.department;
+  const culture = objectJson.culture;
+  const period = objectJson.period;
+  const objectBeginDate = objectJson.objectBeginDate;
+  const objectEndDate = objectJson.objectEndDate;
+  const medium = objectJson.medium;
+  const excavation = objectJson.excavation;
+  const objectURL = objectJson.objectURL;
+  const GalleryNumber = objectJson.GalleryNumber;
   
-  const pre = document.createElement('pre');
-  pre.innerText = JSON.stringify(objectJson, null, 2);
-  
-  objectDiv.appendChild(pre);  
+  text.innerHTML = 
+  `
+  <h1><br><a href= ${objectURL} target="_blank">${title}</a></h1>
+  <br>Artist : ${name}(${artistBeginDate}-${artistEndDate})
+  <br>Size : ${height} x ${width}cm
+  <br>City : ${city}
+  <br>Department : ${department}
+  <br>Culture : ${culture}
+  <br>Period : ${period}
+  <br>Creation Year : ${objectBeginDate}
+  <br>Completion Year : ${objectEndDate}
+  <br>Medium : ${medium}
+  <br>excavation : ${excavation}
+  <br>GalleryNumber : ${GalleryNumber}
+  <br>
+  <br><small>( Press the title to jump to the URL to the object's page at metmuseum.org. If you are not registered, nothing will be written in the field. )</small>
+  `;
+  objectDiv.appendChild(text);
+
 }
+
 
 const getData = async (uri) => {
   try {
@@ -57,3 +80,4 @@ const getData = async (uri) => {
 }
 
 render();
+
