@@ -30,7 +30,7 @@ const search = async (button) => {
     <div><strong class="title"></strong></div>
     <div><strong class="artistDisplayName"></strong></div>
     <div><strong class="country"></strong></div>
-    <a href="#" class="image-link"><img alt="" src="../images/loading.gif" class="thumbnail">`;
+    <a href="#" class="image-link"><img alt="" src="../photos/loader.gif" class="thumbnail">`;
     list.appendChild(item);
   }
 
@@ -42,8 +42,8 @@ const search = async (button) => {
     console.log(objectJson);
 
     object.querySelector(`.id`).textContent = '';
-    object.querySelector(`.title`).textContent = objectJson['title'];
-    object.querySelector(`.artistDisplayName`).textContent = objectJson['artistDisplayName'];
+    object.querySelector(`.title`).textContent = objectJson['title'].substr(0, 20);
+    object.querySelector(`.artistDisplayName`).textContent = objectJson['artistDisplayName'].substr(0, 20);
     object.querySelector(`.country`).textContent = objectJson['country'];
     const a = object.querySelector(`.image-link`);
     a.href = `../detail/detail.html?id=${id}`;

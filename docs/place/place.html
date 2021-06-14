@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel = "stylesheet" href = "style.css">
     <script src = "script.js"></script>
-    <title>WebAPI_group1_Place</title>
+    <title>Search By Country</title>
   </head>
   
   <header>
     <ul id = "menu">
       <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
-      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
-      <li id = "sukima"></li>
+      <li id = "topPage"><a href="../index.html">Search For Works<br>The MET</a></li>
       <li id = "TypeMenu"><a href="../index.html"><br>Type of Search</a></li>
       <li id = "eachMenu"><a href="../size/size.html"><br>Size</a></li>
-      <li id = "eachMenu"><a href="../date/date.html"><br>Date</a></li>
-      <li id = "eachMenu"><a href="place.html"><br>Place</a></li>
+      <li id = "eachMenu"><a href="../date/date.html"><br>Era</a></li>
+      <li id = "eachMenu"><a href="place.html"><br>Country</a></li>
     </ul>
   </header>
 
 
   <body>
     <div class = "description_text">
-      <h1>Search By Place</h1>
+      <h1>Search By Country</h1>
       <h2>Here, you may be able to get a feel for the characteristics of each country's works by scarching for works by country.</h2>
-      <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+      <h3>(Due to API reasons, search results may not appear properly or it may take some time to produce search results.)</h3>
     </div>
     
     <div class = "description">
       <div class = "picture1">
-        <img src="placeimages/explanation.png" alt="explanation-image" width="100%">
+        <img src="placeimages/explanation2.png" alt="explanation-image" width="100%">
       </div> 
-      <p>Even with the same keywords, the atmosphere of the work can vary greatly from country to country.
-        <br>Please search for various keywords and enjoy the differences.</p>
+      <p>Even with the same keywords, the atmosphere of the work can vary greatly from country to country. Please search for various keywords and enjoy the differences.</p>
     </div>
 
     <div class = "search_text">
@@ -47,47 +45,47 @@
   
     <ul id = "buttons">
       <li>
-        <img src="placeimages/France.png" alt="France-image" width="100%">
-        <button name="location" value="France" onclick="search(this);">France</button>
+        <button name="location" value="France" onclick="search(this);">
+          <img src="placeimages/France.png" alt="France-image" width="100%">  
+          <p>France</p>
+        </button>
       </li>
-      <li>
-        <img src="placeimages/Italy.png" alt="France-image" width="100%">
-        <button name="location" value="Italy"  onclick="search(this);">Italy</button>
-      </li>
-      <li>
-        <img src="placeimages/Spain.png" alt="France-image" width="100%">
-         <button name="location" value="Spain"  onclick="search(this);">Spain</button>
-      </li>
-      <li>
-        <img src="placeimages/Greece.png" alt="France-image" width="100%">
-        <button name="location" value="Greece"  onclick="search(this);">Greece</button>
-      </li>
-      <li>
-        <img src="placeimages/UK.png" alt="France-image" width="100%">
-        <button name="location" value="England"  onclick="search(this);">England</button>
-      </li>
-      <li>
-        <img src="placeimages/Japan.png" alt="France-image" width="100%">
-        <button name="location" value="Japan"  onclick="search(this);">Japan</button>
-      </li>
-    </ul>
 
-    <!-- 
-    <ul id = "buttons">
       <li>
-        <h1>国の写真4</h1>
-         <button name="location" value="China"  onclick="search(this);">China</button>
+        <button name="location" value="Italy" onclick="search(this);">
+          <img src="placeimages/Italy.png" alt="Italy-image" width="100%">  
+          <p>Italy</p>
+        </button>
       </li>
+
       <li>
-        <h1>国の写真5</h1>
-        <button name="location" value="Greece"  onclick="search(this);">Greece</button>
+        <button name="location" value="Spain" onclick="search(this);">
+          <img src="placeimages/Spain.png" alt="Spain-image" width="100%">  
+          <p>Spain</p>
+        </button>
       </li>
+
       <li>
-        <h1>国の写真6</h1>
-        <button name="location" value="England"  onclick="search(this);">England</button>
+        <button name="location" value="Greece" onclick="search(this);">
+          <img src="placeimages/Greece.png" alt="Greece-image" width="100%">  
+          <p>Greece</p>
+        </button>
+      </li>
+
+      <li>
+        <button name="location" value="England" onclick="search(this);">
+          <img src="placeimages/UK.png" alt="England-image" width="100%">  
+          <p>England</p>
+        </button>
+      </li>
+      
+      <li>
+        <button name="location" value="Japan" onclick="search(this);">
+          <img src="placeimages/Japan.png" alt="Japan-image" width="100%">  
+          <p>Japan</p>
+        </button>
       </li>
     </ul>
-    -->
 
     <!-- </form> -->
     <div id="SearchResults"></div>
@@ -100,7 +98,8 @@
 
   <footer>
     <p>
-      This website was created by students of Tokyo Metropolitan University as a class project.  API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
+      This website was created by students of Tokyo Metropolitan University as a class project.<br>
+      API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
     </p>
   </footer>
 

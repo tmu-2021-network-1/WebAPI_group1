@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel = "stylesheet" href = "style.css">
     <script src = "script.js"></script>
-    <title>WebAPI_group1_Size</title>
+    <title>Search By Size</title>
   </head>
   
  <header>
     <ul id = "menu">
       <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
-      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
-      <li id = "sukima"></li>
+      <li id = "topPage"><a href="../index.html">Search For Works<br>The MET</a></li>
       <li id = "TypeMenu"><a href="../index.html"><br>Type of Search</a></li>
       <li id = "eachMenu"><a href="size.html"><br>Size</a></li>
-      <li id = "eachMenu"><a href="../date/date.html"><br>Date</a></li>
-      <li id = "eachMenu"><a href="../place/place.html"><br>Place</a></li>
+      <li id = "eachMenu"><a href="../date/date.html"><br>Era</a></li>
+      <li id = "eachMenu"><a href="../place/place.html"><br>Country</a></li>
     </ul>
   </header>
 
@@ -25,7 +24,7 @@
     <div class = "description_text">
       <h1>Search By Size</h1>
       <h2>Here, you can compare the size of the animal to the size of the artwork to get a better idea of the size.</h2>
-      <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+      <h3>(Due to API reasons, search results may not appear properly or it may take some time to produce search results.)</h3>
     </div>
 
     <div class = "description">
@@ -54,32 +53,47 @@
  
     <ul id = "buttons">
       <li>
-        <img src="sizeimages/uk.png" alt="rabbit&fox-image" width="100%">
-        
-        <button name="minWidth" value="0" onclick="search(this);">0 ~ 1m   
+        <!-- <img src="sizeimages/uk.png" alt="rabbit&fox-image" width="100%"> -->
+        <button name="minWidth" value="0" onclick="search(this);">
+          <img src="sizeimages/uk.png" alt="rabbit&fox-image" width="100%">
+          <p>0 - 1m</p>
+        </button> 
+      </li>
+
+      <li>
+        <button name="minWidth" value="100" onclick="search(this);">
+          <img src="sizeimages/kb.png" alt="kangaroo&bear-image" width="100%">
+          <p>1 - 2m</p>  
         </button>
-        
       </li>
+
       <li>
-        <img src="sizeimages/kb.png" alt="kangaroo&bear-image" width="100%">
-        <button name="minWidth" value="100" onclick="search(this);">1 ~ 2m  
+        <button name="minWidth" value="200" onclick="search(this);">
+          <img src="sizeimages/wh.png" alt="crocodile&hose-image" width="100%">
+          <p>2 - 3m</p>
         </button>
       </li>
+
       <li>
-        <img src="sizeimages/wh.png" alt="crocodile&hose-image" width="100%">
-        <button name="minWidth" value="200" onclick="search(this);">2 ~ 3m</button>
+        <button name="minWidth" value="300" onclick="search(this);">
+          <img src="sizeimages/sai.png" alt="rhinoceros-image" width="100%">
+          <p>3 - 4m</p>
+        </button>
       </li>
+
       <li>
-        <img src="sizeimages/sai.png" alt="rhinoceros-image" width="100%">
-        <button name="minWidth" value="300" onclick="search(this);">3 ~ 4m</button>
+        <button name="minWidth" value="400" onclick="search(this);">
+          <img src="sizeimages/iruka.png" alt="dolphin-image" width="100%">
+          <p>4 - 5m</p>
+        </button>
       </li>
+
       <li>
-        <img src="sizeimages/iruka.png" alt="dolphin-image" width="100%">
-        <button name="minWidth" value="400" onclick="search(this);">4 ~ 5m</button>
-      </li>
-      <li>
-        <img src="sizeimages/zou.png" alt="elephant-image" width="100%">
-        <button name="minWidth" value="500" onclick="search(this);">5 ~ 6m</button>
+        
+        <button name="minWidth" value="500" onclick="search(this);">
+          <img src="sizeimages/zou.png" alt="elephant-image" width="100%">
+          <p>5 - 6m</p>
+        </button>
       </li>
     </ul>
 
@@ -90,11 +104,14 @@
       <ul id="objects"></ul>
     </div>
     <pre id="result"></pre> 
+
+    
   </body>
 
   <footer>
     <p>
-      This website was created by students of Tokyo Metropolitan University as a class project.  API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
+      This website was created by students of Tokyo Metropolitan University as a class project.<br>
+      API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
     </p>
   </footer>
  

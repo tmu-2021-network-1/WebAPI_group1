@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel = "stylesheet" href = "style.css">
     <script src = "script.js"></script>
-    <title>WebAPI_group1_Date</title>
+    <title>Search By Era</title>
   </head>
   
   <header>
     <ul id = "menu">
       <li id = "logo"><a href="../index.html">THE<br>MET</a></li>
-      <li id = "topPage"><a href="../index.html">Metropolitan<br>Museum</a></li>
-      <li id = "sukima"></li>
+      <li id = "topPage"><a href="../index.html">Search For Works<br>The MET</a></li>
       <li id = "TypeMenu"><a href="../index.html"><br>Type of Search</a></li>
       <li id = "eachMenu"><a href="../size/size.html"><br>Size</a></li>
-      <li id = "eachMenu"><a href="date.html"><br>Date</a></li>
-      <li id = "eachMenu"><a href="../place/place.html"><br>Place</a></li>
+      <li id = "eachMenu"><a href="date.html"><br>Era</a></li>
+      <li id = "eachMenu"><a href="../place/place.html"><br>Country</a></li>
     </ul>
   </header>
 
   <body>
     <div class = "description_text">
-      <h1>Search By Date</h1>
+      <h1>Search By Era</h1>
       <h2>Here, you can get a sense of the era in while the work was created by searching by date.</h2>
-      <h3>※ Due to API reasons, search results may not appear properly or it may take some time to produce search results.</h3>
+      <h3>(Due to API reasons, search results may not appear properly or it may take some time to produce search results.)</h3>
     </div>
 
 
@@ -35,7 +34,7 @@
     </div>
 
     <div class = "search_text">
-      <h1>Century-By-Century</h1>
+      <h1>By Era</h1>
       <h3>Type in a keyword of your choice and press the button with the number on it, and the search results related to that keyword and century will appear below.
         <br>
         Clicking on a work that appears in the search results will take you to the detailed page of that work.
@@ -45,28 +44,45 @@
 
     <ul id = "buttons">
       <li>
-        <img src="../photos/1000.png" width="100%">
-        <button name="datebegin" value="1000" onclick="search(this);">1000-1200</button>
+        <button name="datebegin" value="1000" onclick="search(this);">
+          <img src="../photos/1000.png" width="100%">
+          <p>1000 - 1200</p>
+        </button>
       </li>
+
       <li>
-        <img src="../photos/1200.png" width="100%">
-        <button name="datebegin" value="1200" onclick="search(this);">1200-1400</button>
+        <button name="datebegin" value="1200" onclick="search(this);">
+          <img src="../photos/1200.png" width="100%">
+          <p>1200 - 1400</p>
+        </button>
       </li>
+
       <li>
-        <img src="../photos/1400.png" width="100%">
-        <button name="datebegin" value="1400" onclick="search(this);">1400-1600</button>
+        <button name="datebegin" value="1400" onclick="search(this);">
+          <img src="../photos/1400.png" width="100%">
+          <p>1400 - 1600</p>
+        </button>
       </li>
+
       <li>
-        <img src="../photos/1600.png" width="100%">
-        <button name="datebegin" value="1600" onclick="search(this);">1600-1800</button>
+        <button name="datebegin" value="1600" onclick="search(this);">
+          <img src="../photos/1600.png" width="100%">
+          <p>1600 - 1800</p>
+        </button>
       </li>
+
       <li>
-        <img src="../photos/1800.png" width="100%">
-        <button name="datebegin" value="1800" onclick="search(this);">1800-2000</button>
+        <button name="datebegin" value="1800" onclick="search(this);">
+          <img src="../photos/1800.png" width="100%">
+          <p>1800 - 2000</p>
+        </button>
       </li>
+
       <li>
-        <img src="../photos/2000.png" width="100%">
-        <button name="datebegin" value="2000" onclick="search(this);">2000-</button>
+        <button name="datebegin" value="2000" onclick="search(this);">
+          <img src="../photos/2000.png" width="100%">
+          <p>2000 -</p>
+        </button>
       </li>
     </ul>
 
@@ -81,7 +97,8 @@
 
   <footer>
     <p>
-      This website was created by students of Tokyo Metropolitan University as a class project.  API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
+      This website was created by students of Tokyo Metropolitan University as a class project.<br>
+      API used: <a href = "https://metmuseum.github.io/" target = "_blank">The Metropolitan Museum of Art Collection API</a>
     </p>
   </footer>
 
