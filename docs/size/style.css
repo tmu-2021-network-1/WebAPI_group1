@@ -231,7 +231,7 @@ button {
   margin: 0em 0;
   padding: 0em;
   font-size: 1em;
-  background-color: rgb(202, 202, 202);
+  background-color: rgb(184, 183, 183);
   color: rgb(255, 255, 255);
   cursor: pointer;
   border: 0;
@@ -250,12 +250,17 @@ button p {
   background-color: rgb(133, 133, 133);
 }
 
+button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
 button p:hover {
   background-color: rgb(185, 0, 0);
 }
 
 footer{
-  margin-left: 5%;
+  margin: 5em;
+  text-align: center;
   font-size: 0.8em;
   color: rgb(124, 124, 124);
 }

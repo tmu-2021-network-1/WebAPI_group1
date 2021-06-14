@@ -86,10 +86,14 @@ body {
   margin-bottom: 5%;
 }
 
+text {
+  color: rgb(255, 255, 255);
+}
+
 /*footer*/
 footer {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 5em;
+  text-align: center;
   font-size: 0.8em;
   color: rgb(124, 124, 124);
 }

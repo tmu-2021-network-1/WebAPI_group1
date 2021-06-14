@@ -162,7 +162,8 @@ hr {
 }
 
 footer{
-  margin-left: 5%;
+  margin: 5em;
+  text-align: center;
   font-size: 0.8em;
   color: rgb(124, 124, 124);
 }
